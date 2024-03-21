@@ -1,16 +1,16 @@
 {
-	"name": "casa",
+	"name": "cidade",
 	"version": "0.1.0",
-	"description": "Casas tradicionais luso-brasileiras",
+	"description": "Cidades tradicionais luso-brasileiras",
 	"keywords": [
-		"casa",
+		"cidade",
 		"galeria",
 		"base de dados",
 		"arquitetura tradicional"
 	],
 	"author": "Pedro P. Palazzo",
 	"license": "CC_BY",
-	"repository": "arqtrad/casa",
+	"repository": "arqtrad/cidade",
 	"main": "index.js",
 	"dependencies": {
 		"@11ty/eleventy-fetch": "^4.0.0",
