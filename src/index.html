@@ -1,0 +1,41 @@
+---
+title: "Página inicial"
+layout: "layouts/home.njk"
+isHome: true
+header:
+  overlay_image: "https://estrategias-construcao.tradicional.arq.br/assets/media/Rua_de_S_Pedro_from_the_Gotto_Plan_of_Rio_de_Janeiro_1871_stitched.jpg"
+  filter: 0.5
+  caption: "Planta do Rio de Janeiro por Edward Gotto, 1866"
+triptych:
+- image_path: https://placehold.co/210x210/png
+  title     : "Padrões vernaculares"
+  excerpt   : "Padrões urbanísticos tradicionais até meados do século XVIII"
+  url       : "#"
+  btn_class : "btn-primary"
+- image_path: https://placehold.co/210x210/png
+  title     : "Padrões modernos"
+  excerpt   : "Padrões vernaculares da urbanização nos séculos XIX e XX"
+  url       : "#"
+  btn_class : "btn-primary"
+- image_path: https://placehold.co/210x210/png
+  title     : "Espaço público"
+  excerpt   : "Largos e praças tradicionais"
+  url       : "#"
+  btn_class : "btn-primary"
+---
+
+<section id="colecoes-especiais">
+  <h2 class="text-center pb-3">Coleções especiais</h2>
+  {% include "partials/triptych.njk" %}
+</section>
+
+<section id="inclusoes-recentes">
+  <h2 class="text-center my-3">Inclusões recentes</h2>
+
+  <div class="container-fluid">
+    <div class="row g-3 m-3">
+    {% assign album = collections.cidade | reverse %}
+    {% include "partials/album.njk" %}
+    </div><!--/.row-->
+  </div><!--/.container-fluid-->
+</section>
