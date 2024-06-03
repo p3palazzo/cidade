@@ -1,10 +1,10 @@
 ---
-title: "Página inicial"
-layout: "layouts/home.njk"
-isHome: true
+title: "Cidade tradicional"
+excerpt: "Documentário de urbanização publicada na bibliografia de referência"
+layout: "layouts/base.njk"
 header:
   overlay_image: "https://estrategias-construcao.tradicional.arq.br/assets/media/Rua_de_S_Pedro_from_the_Gotto_Plan_of_Rio_de_Janeiro_1871_stitched.jpg"
-  filter: 0.5
+  overlay_filter: 0.7
   caption: "Planta do Rio de Janeiro por Edward Gotto, 1866"
 triptych:
 - image_path: https://placehold.co/210x210/png
@@ -22,20 +22,29 @@ triptych:
   excerpt   : "Largos e praças tradicionais"
   url       : "#"
   btn_class : "btn-primary"
+templateEngineOverride: njk
 ---
+
+{%- if not lang -%}
+  {%- set lang = site.locale -%}
+{%- endif %}
 
 <section id="colecoes-especiais">
   <h2 class="text-center pb-3">Coleções especiais</h2>
-  {% include "partials/triptych.njk" %}
+{%- include "partials/triptych.njk" -%}
 </section>
 
 <section id="inclusoes-recentes">
   <h2 class="text-center my-3">Inclusões recentes</h2>
-
-  <div class="container-fluid">
-    <div class="row g-3 m-3">
-    {% assign album = collections.cidade | reverse %}
+  <div class="row row-cols-md-2 row-cols-xl-3 g-3 mx-5">
+  {% for post in pagination.items %}
     {% include "partials/album.njk" %}
-    </div><!--/.row-->
-  </div><!--/.container-fluid-->
+  {% endfor %}
+  </div>
+  <div class="d-flex flex-columns row-cols-md-2 row-cols-lg-3 mx-auto mt-4 justify-content-center">
+    <a type="button" href="/cidade/" class="btn btn-outline-primary btn-lg">
+      {{ ui_text[lang].load_all }}
+    </a>
+  </div>
 </section>
+

@@ -1,0 +1,6 @@
+layout          : "layouts/base.njk"
+header:
+  teaser        : "/assets/media/fragoso-teaser.jpg"
+  overlay_image : "/assets/media/fragoso-overlay.jpg"
+  overlay_filter: 0.7
+  caption       : "João da Rocha Fragoso, <cite>Mappa architectural do Rio de Janeiro</cite>, 1874. Litografia"
