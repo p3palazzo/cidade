@@ -1,0 +1,6 @@
+[submodule "_scss"]
+	path = _scss
+	url = https://github.com/arqtrad/styles-bootstrap
+[submodule "src/_includes"]
+	path = src/_includes
+	url = https://github.com/arqtrad/eleventy-includes
